@@ -2,12 +2,12 @@ result = 0
 operand = None
 operator = None
 wait_for_number = True
-temp = 0
+
 
 while wait_for_number :
     enter_operand = input()
     try :
-        result = input(enter_operand)
+        result = int(enter_operand)
     except ValueError :
         print(f"{enter_operand} is not number. Try again ")
         continue
@@ -41,8 +41,7 @@ while operator != "=" :
         if operand == 0 :
             print("Error. Devision by zero is not allowed ")
             continue
-        result /= operand
+            result /= operand
 
 print(f"Result : {result}")
     
-            
