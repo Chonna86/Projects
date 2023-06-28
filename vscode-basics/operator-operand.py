@@ -3,7 +3,6 @@ operand = None
 operator = None
 wait_for_number = True
 
-
 while wait_for_number :
     enter_operand = input()
     try :
