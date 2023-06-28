@@ -40,7 +40,7 @@ while operator != "=" :
         if operand == 0 :
             print("Error. Devision by zero is not allowed ")
             continue
-            result /= operand
+        result /= operand
 
 print(f"Result : {result}")
     
