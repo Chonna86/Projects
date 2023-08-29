@@ -7,5 +7,5 @@ setup(
     license='MIT',
     packages=find_packages(),
     install_requires=['markdown'],
-    entry_points={'console_scripts': ['clean-folder = clean_folder.clean:main'] }
+    entry_points={'console_scripts': ['clean-folder = clean_folder.script:main'] }
 )
