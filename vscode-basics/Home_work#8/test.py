@@ -1,7 +1,7 @@
-if user_birthday.month == 1:
-            birthday_this_year = user_birthday.replace(year=current_year + 1)
-        else:
-            birthday_this_year = user_birthday.replace(year=current_year)
-
-        if birthday_this_year < today:
-            continue
+from datetime import date, datetime, timedelta
+today = date.today()
+print(today)
+target_date = date(year=2024,month=1,day=1)
+print(target_date)
+differnce = target_date - today
+print(differnce)
