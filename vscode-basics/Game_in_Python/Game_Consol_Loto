@@ -45,7 +45,7 @@ class Player:
         self.winner = False
 
     def check_winner(self):
-        
+        pass
 
     def mark_number(self, number):
         pass
