@@ -12,7 +12,7 @@ class TicTacToe:
     def create_board(self):
         for i in range(3):
             for j in range(3):
-                button = tk.Button(self.window, text="", font=('Arial', 50), height=2, width=6, bg='lightblue',
+                button = tk.Button(self.window, text="", font=('Arial', 50), height=2, width=6, bg='green',
                                    command=lambda row=i, col=j: self.handle_click(row, col))
                 button.grid(row=i, column=j, sticky="nsew")
 
