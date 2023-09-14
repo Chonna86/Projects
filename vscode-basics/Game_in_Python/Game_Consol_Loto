@@ -38,7 +38,7 @@ card = Card()
 card.pretty_card_info()
 
 
-'''class Player:
+class Player:
     def __init__(self, name: str, card: Card):
         self.card = card
         self.name = name
@@ -48,7 +48,7 @@ card.pretty_card_info()
         pass
 
     def mark_number(self, number):
-        pass'''
+        pass
 
 
 class LotoGame:
@@ -130,6 +130,6 @@ quantity, winners = game.start_game()
 print(f'Step required {quantity}')
 for winner in winners:
     print(f'Winner {winner.name}')
-    #winner.card.pretty_card_info()
+    winner.card.pretty_card_info()
 
 
