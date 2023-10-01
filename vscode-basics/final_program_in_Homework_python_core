@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 import pickle
 
 
+
 class Field:
     def __init__(self, value):
         self._value = value
@@ -93,7 +94,7 @@ class Record:
 
 class AddressBook(UserDict):
     def __init__(self):
-        self.data = {}
+        super().__init__() 
 
     def add_record(self, record):
         self.data[record.name.value] = record
@@ -204,6 +205,16 @@ def get_birthday(command):
         return f"{name} does not have a birthday recorded."
     else:
         return "Contact not found"
+    
+def search_contacts(query):
+    results = []
+    for record in contacts.data.values():
+        if query in record.name.value:
+            results.append(record)
+        for phone in record.phones:
+            if query in phone.value:
+                results.append(record)
+    return results
 
 
 '''Now let's create the main function, which will do all the interaction
@@ -235,6 +246,15 @@ def main():
         elif user_input.startswith("birthday"):
             result = get_birthday(user_input)
             print(result)
+        elif user_input.startswith("search"):
+            query = user_input[7:].strip()
+            results = search_contacts(query)
+            if results:
+                print("Search results:")
+                for result in results:
+                    print(result)
+            else:
+                print("No matching contacts found.")
         else:
             print("Invalid command")
 
