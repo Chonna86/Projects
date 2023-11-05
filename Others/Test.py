@@ -52,6 +52,15 @@ class ObserverB(Observer):
         if publisher._indicator > 2:
             print("ObserverB: reacts to the indicator greater than 2")
 
+    
+
+    def __str__(self):
+        return 
+
+    def __unicode__(self):
+        return 
+
+
 
 def client():
     publisher = PublisherMessages()
